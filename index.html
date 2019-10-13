@@ -64,30 +64,66 @@
               <ons-icon icon="md-face"></ons-icon>
             </div>
           </ons-toolbar>
-          <ons-card style="background-color: rgba(255, 235, 205, 0.37)">
-            <ons-row>
-              <ons-col>
-                <ons-list-item tappable>
-                  <label class="left">
-                    <ons-checkbox input-id="check-1"></ons-checkbox>
-                  </label>
-                  <label for="check-1" class="center">
-                    Delivery
-                  </label>
-                </ons-list-item>
-              </ons-col>
-              <ons-col>
-                <ons-list-item tappable>
-                  <label class="left">
-                    <ons-checkbox input-id="check-2"></ons-checkbox>
-                  </label>
-                  <label for="check-2" class="center">
-                    Pick Up
-                  </label>
-                </ons-list-item>
-              </ons-col>
-            </ons-row>
-
+          
+              <ons-card style="background-color: rgba(255, 235, 205, 0.37)">
+                <div class="content" style="text-align: center;">
+                  <div class="recomended">
+                      <h4>Recomended</h4>
+                      <ons-carousel auto-scroll auto-scroll-ratio="0.5" auto-refresh swipeable overscrollable item-width="130px"
+                          class="recomended_list" id="carousel">
+                          <ons-carousel-item modifier="nodivider" id="item1" class="recomended_item">
+                              <div class="thumbnail" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/recommended%2Fkfc.jpg?alt=media&token=c7aa805f-6f03-4d1b-bc8e-0c0baee13523')">
+                              </div>
+                              <div class="recomended_item_title" id="item1_Name"></div>
+                          </ons-carousel-item> 
+                          <ons-carousel-item modifier="nodivider" id="item2" class="recomended_item">
+                            <div class="thumbnail" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/recommended%2Fjapan.jpg?alt=media&token=72df14b4-bb16-4cc3-9f33-018c04361ae7')">
+        
+                            </div>
+                            <div class="recomended_item_title" id="item1_Name"></div>
+                        </ons-carousel-item>
+                        <ons-carousel-item modifier="nodivider" id="item3" class="recomended_item">
+                            <div class="thumbnail" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/recommended%2Ffirerice.jpg?alt=media&token=346c4d69-5684-4012-a829-630ef7590ad7')">
+        
+                            </div>
+                            <div class="recomended_item_title" id="item1_Name"></div>
+                        </ons-carousel-item>
+                        <ons-carousel-item modifier="nodivider" id="item4" class="recomended_item">
+                            <div class="thumbnail" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/recommended%2Fpizza.jpg?alt=media&token=d766fb91-0290-4fed-84c4-3beccd062418')">
+        
+                            </div>
+                            <div class="recomended_item_title" id="item1_Name"></div>
+                        </ons-carousel-item>
+                        <ons-carousel-item modifier="nodivider" id="item5" class="recomended_item">
+                            <div class="thumbnail" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/recommended%2Fsomtum.jpg?alt=media&token=c2c4ed11-031c-4538-8ab5-d4a602b4f866')" >
+        
+                            </div>
+                            <div class="recomended_item_title" id="item1_Name"></div>
+                        </ons-carousel-item>               
+                      </ons-carousel>
+                  </div>
+                <ons-row>
+                  <ons-col>
+                    <ons-list-item tappable>
+                      <label class="left">
+                        <ons-checkbox input-id="check-1"></ons-checkbox>
+                      </label>
+                      <label for="check-1" class="center">
+                        Delivery
+                      </label>
+                    </ons-list-item>
+                  </ons-col>
+                  <ons-col>
+                    <ons-list-item tappable>
+                      <label class="left">
+                        <ons-checkbox input-id="check-2"></ons-checkbox>
+                      </label>
+                      <label for="check-2" class="center">
+                        Pick Up
+                      </label>
+                    </ons-list-item>
+                  </ons-col>
+                </ons-row>
             <p style="text-align: center; margin-top: 10px;">
               <ons-search-input placeholder="Search" onchange="ons.notification.alert('Searched for: ' + this.value)">
               </ons-search-input>
@@ -773,5 +809,14 @@
 
 
 </body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/7.2.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/7.2.0/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
 
 </html>
