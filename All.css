@@ -144,7 +144,28 @@ input[type=password] {
 .thumbnail {
   width: 120px;
   height: 120px;
-  background-size: 160%;
+  background-size: 150%;
+  display: table;
+  background-color: rgba(0, 0, 0, 0.42);
+}
+.thumbnail1 {
+  width: 120px;
+  height: 120px;
+  background-size: 200%;
+  display: table;
+  background-color: rgba(0, 0, 0, 0.42);
+}
+.thumbnail2 {
+  width: 120px;
+  height: 120px;
+  background-size: 180%;
+  display: table;
+  background-color: rgba(0, 0, 0, 0.42);
+}
+.thumbnail3 {
+  width: 120px;
+  height: 120px;
+  background-size: 200%;
   display: table;
   background-color: rgba(0, 0, 0, 0.42);
 }
