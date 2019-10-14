@@ -178,3 +178,16 @@ input[type=password] {
   background-color: white;
   padding-top: 1px;
 }
+
+.imgcategory{
+  width:150px;
+  height:100px;
+  background-size: 130%;
+}
+.category_item{
+  padding-left: 10px;
+}
+.category_item_title{
+  font-size: 18px;
+  font-weight: bold;
+}

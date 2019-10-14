@@ -12,7 +12,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 var db = firebase.firestore();
 
-if (page.id === 'FoodCategory') {
+
  $("#carousel").empty();
   db.collection("recommended").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {       
@@ -24,7 +24,17 @@ if (page.id === 'FoodCategory') {
       $("#carousel").append(item);
     });
   });
-}
 
+  $("#card").empty();
+  db.collection("category").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {       
+      var item1 = `<ons-card modifier="nodivider"id="item${doc.data().id}" class="category_item">
+          <div class="imgcategory" style="background-image: url('${doc.data().img}')">
+          </div>
+          <div class="category_item_title" id="item1_${doc.data().id}">${doc.data().Name}</div>
+      </ons-card>`
+      $("#card").append(item1);
+    });
+  });
 
 
