@@ -12,51 +12,19 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 var db = firebase.firestore();
 
-
-
-document.addEventListener('init', function (event) {
-  var page = event.target;
-
-
-  if (page.id === 'page') {
-    console.log("page");
-
-    $("#menubtn").click(function () {
-      $("#sidemenu")[0].open();
+if (page.id === 'FoodCategory') {
+ $("#carousel").empty();
+  db.collection("recommended").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {       
+      var item = `<ons-carousel-item modifier="nodivider" id="item${doc.data().id}" class="recomended_item">
+          <div class="thumbnail" style="background-image: url('${doc.data().url}')">
+          </div>
+          <div class="recomended_item_title" id="item1_${doc.data().id}">${doc.data().Name}</div>
+      </ons-carousel-item>`
+      $("#carousel").append(item);
     });
-
-    $("#carousel").empty();
-    db.collection("recommended").get().then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {       
-        var item = `<ons-carousel-item modifier="nodivider" id="item${doc.data().id}" class="recomended_item">
-            <div class="thumbnail" style="background-image: url('${doc.data().url}')">
-            </div>
-            <div class="recomended_item_title" id="item1_${doc.data().id}">${doc.data().Name}</div>
-        </ons-carousel-item>`
-        $("#carousel").append(item);
-      });
-    });
-  }
+  });
+}
 
 
-window.fn = {};
 
-window.fn.open = function() {
-  var menu = document.getElementById('menu');
-  menu.open();
-};
-
-window.fn.load = function(page) {
-  var content = document.getElementById('content');
-  var menu = document.getElementById('menu');
-  content.load(page)
-    .then(menu.close.bind(menu));
-};
-
-window.fn.pushPage = function (page, anim) {
-  if (anim) {
-    document.getElementById('myNavigator').pushPage(page.id, { data: { title: page.title }, animation: anim });
-  } else {
-    document.getElementById('myNavigator').pushPage(page.id, { data: { title: page.title } });
-  }
-};

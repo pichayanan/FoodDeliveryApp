@@ -48,7 +48,7 @@
 
 
       <template id="FoodCategory.html">
-        <ons-page>
+        <ons-page id="FoodCategory">
 
           <ons-toolbar style="background-color: rgb(233, 163, 71)">
             <div class="left">
@@ -202,7 +202,7 @@
         </ons-page>
       </template>
       <template id="About.html">
-        <ons-page>
+        <ons-page id="About">
           <ons-toolbar style="background-color:rgb(233, 163, 71)">
             <div class="left">
               <ons-toolbar-button onclick="fn.open()">
@@ -224,7 +224,7 @@
 
 
   <template id="register.html">
-    <ons-page>
+    <ons-page id="register">
 
       <ons-card style="margin-top: 50px;margin-right: 20px;margin-left: 20px">
         <div class="formarea">
@@ -266,7 +266,7 @@
 
   <template id="login.html">
 
-    <ons-page>
+    <ons-page id="login">
 
 
 
@@ -801,6 +801,29 @@
       document.querySelector('#myNavigator').popPage();
     }
 
+    window.fn = {};
+
+window.fn.open = function() {
+  var menu = document.getElementById('menu');
+  menu.open();
+};
+
+window.fn.load = function(page) {
+  var content = document.getElementById('content');
+  var menu = document.getElementById('menu');
+  content.load(page)
+    .then(menu.close.bind(menu));
+
+    
+};
+
+window.fn.pushPage = function (page, anim) {
+  if (anim) {
+    document.getElementById('myNavigator').pushPage(page.id, { data: { title: page.title }, animation: anim });
+  } else {
+    document.getElementById('myNavigator').pushPage(page.id, { data: { title: page.title } });
+  }
+};
   </script>
 
 
