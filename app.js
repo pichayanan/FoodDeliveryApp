@@ -36,5 +36,19 @@ var db = firebase.firestore();
       $("#card").append(item1);
     });
   });
-
+  
+  $("#list").empty();
+  db.collection("list").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {       
+      var item2 = `<ons-card modifier="chevron" id="item${doc.data().id}" class="list_item">
+          <div class="imglist" style="background-image: url('${doc.data().url}')">
+          </div>
+          <div class="imgrate" style="background-image: url('${doc.data().rate}')">
+          </div>
+          <div class="list_item_title" id="item1_${doc.data().id}">${doc.data().Name}</div>
+          <div class="list_title" id="item1_${doc.data().id}">${doc.data().title}</div>
+      </ons-card>`
+      $("#list").append(item2);
+    });
+  });
 
