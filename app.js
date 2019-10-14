@@ -52,3 +52,17 @@ var db = firebase.firestore();
     });
   });
 
+  $("#menu").empty();
+  db.collection("menu").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {       
+      var item3 = `<ons-card modifier="chevron" id="item${doc.data().id}" class="menu_item">
+          <div class="imgmenu" style="background-image: url('${doc.data().url}')">
+          </div>
+          <div class="imgprice" id="item1_${doc.data().id}">${doc.data().price}</div>
+          <div class="menu_item_title" id="item2_${doc.data().id}">${doc.data().Name}</div>
+          <div class="menu_title" id="item3_${doc.data().id}">${doc.data().title}</div>
+      </ons-card>`
+      $("#menu").append(item3);
+    });
+  });
+
