@@ -19,6 +19,12 @@
   <link rel="stylesheet" href="css/onsenui.css">
   <link rel="stylesheet" href="css/onsen-css-components.min.css">
   <script src="js/onsenui.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script>
+
+  <script src="lib/jquery/jquery-3.4.1.min.js"></script>
 
 
 </head>
@@ -288,16 +294,16 @@
             </div>
 
             <div class="form-row">
-              <input type="text" class="text-input--underbar width-half" placeholder="First" value="">
-              <input type="text" class="text-input--underbar width-half" placeholder="Last" value="">
+              <input id="first" type="text" class="text-input--underbar width-half" placeholder="First Name" value="">
+              <input id="last" type="text" class="text-input--underbar width-half" placeholder="Last Name" value="">
             </div>
 
             <div class="form-row">
-              <input type="text" class="text-input--underbar width-full" placeholder="Email" value="">
+              <input id="email" type="text" class="text-input--underbar width-full" placeholder="Email" value="">
             </div>
 
             <div class="form-row">
-              <input type="password" class="text-input--underbar width-full" placeholder="Password" value="">
+              <input id ="pass" type="password" class="text-input--underbar width-full" placeholder="Password" value="">
             </div>
 
             <div class="lucent">
@@ -1095,7 +1101,24 @@
       }
     };
 
+   function saveData() {
+     var fn = document.getElementById('first');
+     var ln = document.getElementById('last');
+     var em = document.getElementById('email');
+     var ps = document.getElementById('pass');
+     insertData(first.value,last.value,email.value,pass.value)
+   }
+   function insertData(first,last,email,pass){
+     var firebaseRef = firebase.database().ref("users");
+     firebaseRef.push({
+            fn:first,
+            ln:last,
+            em:email,
+            ps:pass
 
+     });
+     console.log("Insert Success");
+   }
 
   </script>
 

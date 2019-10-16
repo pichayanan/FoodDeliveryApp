@@ -12,23 +12,35 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 var db = firebase.firestore();
 
+var provider = new firebase.auth.GoogleAuthProvider();
+provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    //var displayName = user.displayName;
+    var email = user.email;
+    console.log(email + "signed in");
+    // var emailVerified = user.emailVerified;
+    // var photoURL = user.photoURL;
+    // var isAnonymous = user.isAnonymous;
+    // var uid = user.uid;
+    // var providerData = user.providerData;
+    // ...
+  } else {
+    console.log("sign out");
+    // User is signed out.
+    // ...
+  }
+});
+
 document.addEventListener('init', function (event) {
   var page = event.target;
 
 
   if (page.id === 'login') {
     console.log("login")
-      
-    firebase.auth().onAuthStateChanged(function (user) {
-      if (user) {
-        var email = user.username;
-        console.log(email + "signed in");
-      } else {
-        console.log("sign out")
-      }
-  
-  
-    });
+
     $("#signinbtn").click(function () {
       var username = $("#username").val();
       var password = $("#password").val();
@@ -37,42 +49,45 @@ document.addEventListener('init', function (event) {
       firebase.auth().signInWithEmailAndPassword(username, password)
         .then(function (result) {
           console.log(result);
-          ons.notification.alert("LOGIN Complete!!!");
-          content.load("page.html")
-            .then(menu.close.bind(menu));
+         $("#signinbtn").click(function(){
+         var username = $("#username").val();
+         var password = $("#password").val();
+         firebase.auth().signInWithEmailAndPassword(username, password).catch(function(error) {
 
-        }).catch(function (error) {
-          console.log(error.message);
-          ons.notification.alert(error.message);
-        });
+        console.log(error.message);
+      });
 
+    })
+    });
     });
 
-    $("#gmailbtn").click(function () {
-      // var provider = new firebase.auth.GoogleAuthProvider();
-      // provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
-      // firebase.auth().languageCode = 'pt';
-      
-
-      // firebase.auth().signInWithPopup(provider).then(function (result) {
-      //   content.load('page.html').then(menu.close.bind(menu));
-
-      // }).catch(function (error) {
-      //   console.log(error);
-      // });
-      firebase.auth().signInWithPopup(provider).then(function (result) {
-        var token = result.credential.accessToken;
+    $('#gmailbtn').click( function googleLogin() {
+      firebase.auth().signInWithRedirect(provider);
+      firebase.auth().getRedirectResult().then(function(result) {
+        if (result.credential) {
+          // This gives you a Google Access Token. You can use it to access the Google API.
+          var token = result.credential.accessToken;
+          // ...
+        }
+        // The signed-in user info.
         var user = result.user;
-        $("#content")[0].load("page.html");
-    }).catch(function (error) {
+        console.log('user'+token);
+        
+      }).catch(function(error) {
+        // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
+        // The email of the user's account used.
         var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
         var credential = error.credential;
+        // ...
+        console.log('error'+errorCode);
+      });
     });
-    })
-
+  
   }
+
 });
 
 $("#carousel").empty();
