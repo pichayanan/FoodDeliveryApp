@@ -66,3 +66,14 @@ var db = firebase.firestore();
     });
   });
 
+  $("#LOGO").empty();
+  db.collection("LOGO").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {       
+      var item4 = `<ons-card modifier="chevron" id="item${doc.data().id}" class="logo_item">
+          <div class="imglogo" style="background-image: url('${doc.data().URL}')">
+          </div>
+          
+      </ons-card>`
+      $("#LOGO").append(item4);
+    });
+  });

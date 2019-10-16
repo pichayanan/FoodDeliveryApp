@@ -266,13 +266,17 @@
   <template id="register.html">
     <ons-page id="register">
 
-      <ons-card style="margin-top: 50px;margin-right: 20px;margin-left: 20px">
-        <div class="formarea">
+      <ons-card style="margin-top: 50px;margin-right: 20px;margin-left: 20px;border: none;background-color: rgba(170, 131, 80, 0.342)" class="LOGO">
+        <center><div class="formarea" style="background-color: rgba(170, 131, 80, 0)">
           <center>
             <h2>Sign Up</h2>
           </center>
-          <div>
-            <center><img src="img/logo.jpg" width="300px" height="150px">
+          <div modifier="nodivider" id="item1" class="logo_item">
+            <center>
+                <div class="imglogo"
+                style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/logoApp%2F214-2142458_food-truck-park-logo.png?alt=media&token=16e50736-6938-453d-b14f-6dfeb725e321')">
+
+              </div>
             </center>
           </div>
 
@@ -294,10 +298,11 @@
           </div>
 
           <div class="vspc form-row">
-            <ons-button modifier="large" class="login-button" id="signup-btn" onclick="change_page2()">Sign Up
+            <ons-button modifier="large" class="login-button" id="signup-btn" style="background-color: rgb(233, 150, 41);" onclick="change_page2()">Sign Up
             </ons-button>
           </div>
         </div>
+      </center>
       </ons-card>
     </ons-page>
   </template>
@@ -310,31 +315,40 @@
 
 
 
-      <ons-card style="margin-top: 50px;margin-right: 20px;margin-left: 20px">
-        <div class="login-form">
-          <center>
-            <h2>Sign In</h2>
-          </center>
-          <div>
-            <center><img src="img/logo.jpg" width="300px" height="150px">
-            </center>
-          </div>
+      <ons-card class="LOGO"  style="margin-top: 50px;margin-right: 20px;margin-left: 20px ;border: none;background-color: rgba(170, 131, 80, 0.342)">
+        <center><div class=" login-form" style="background-color: rgba(170, 131, 80, 0)">
+        <center>
+          <h2>Sign In</h2>
+        </center>
+       <center>
+              <div class="imglogo"
+                style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/logoApp%2F214-2142458_food-truck-park-logo.png?alt=media&token=16e50736-6938-453d-b14f-6dfeb725e321')">
 
-          <input type="email" class="text-input--underbar" placeholder="Email" value="">
-          <input type="password" class="text-input--underbar" placeholder="Password" value="">
+              </div>
+            </center>
+          
+        <br><br>
+        <center>
+          <ons-input type="email" class="text-input--underbar" placeholder="Email" value=""></ons-input>
           <br><br>
-          <ons-row>
-            <ons-col style="margin: 10px">
-              <ons-button modifier="large" class="login-button" id="login-button" onclick="change_page()">Sign In
-              </ons-button>
-            </ons-col>
-            <ons-col style="margin: 10px">
-              <ons-button modifier="large" class="login-button" id="signup-button" onclick="change_page1()">Sign Up
-              </ons-button>
-            </ons-col>
-          </ons-row>
+          <ons-input type="password" class="text-input--underbar" placeholder="Password" value=""></ons-input>
+        </center>
+        <br><br>
+        <ons-row>
+          <ons-col style="margin: 10px">
+            <ons-button modifier="large" class="login-button" id="login-button"
+              style="background-color: rgb(233, 150, 41);" onclick="change_page()">Sign In
+            </ons-button>
+          </ons-col>
+          <ons-col style="margin: 10px">
+            <ons-button modifier="large" class="login-button" id="signup-button"
+              style="background-color: rgb(233, 150, 41);" onclick="change_page1()">Sign Up
+            </ons-button>
+          </ons-col>
+        </ons-row>
 
         </div>
+      </center>
       </ons-card>
 
     </ons-page>

@@ -225,3 +225,12 @@ input[type=password] {
   height:120px;
   background-size: 120%;
 }
+.imglogo{
+  width:175px;
+  height:130px;
+  background-size: 100.50%; 
+  
+}
+.LOGO{
+  background-blend-mode: color-burn;
+}
