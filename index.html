@@ -30,7 +30,7 @@
 </head>
 
 <body>
-  <ons-navigator swipeable id="myNavigator" page="login.html"></ons-navigator>
+  <ons-navigator swipeable id="myNavigator" page="page.html"></ons-navigator>
 
 
   <template id="page.html">
@@ -45,6 +45,10 @@
               <ons-list-item onclick="fn.load('OrderComfirmmation.html')" tappable>
                 Your Order
               </ons-list-item>
+                 <ons-list-item id="backhomebtn"onclick="fn.load('login.html')" tappable>
+                  Sing In / Sing Up
+                </ons-list-item>
+
             </ons-list>
           </ons-page>
         </ons-splitter-side>
@@ -323,67 +327,9 @@
 
 
 
-  <template id="login.html">
+  
 
-    <ons-page id="login">
-
-
-
-      <ons-card class="LOGO"
-        style="margin-top: 50px;margin-right: 20px;margin-left: 20px ;border: none;background-color: rgba(170, 131, 80, 0.342)">
-        <center>
-          <div class=" login-form" style="background-color: rgba(170, 131, 80, 0)">
-            <center>
-              <h2>Sign In</h2>
-            </center>
-            <center>
-              <div class="imglogo"
-                style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/logoApp%2F214-2142458_food-truck-park-logo.png?alt=media&token=16e50736-6938-453d-b14f-6dfeb725e321')">
-
-              </div>
-            </center>
-
-            <br><br>
-            <div style="text-align: center; margin-top: 30px;">
-              <p>
-                <ons-input id="username" modifier="underbar" placeholder="Username"></ons-input>
-              </p>
-              <p>
-                <ons-input id="password" modifier="underbar" type="password" placeholder="Password">
-                </ons-input>
-              </p>
-              <br><br>
-              <ons-row>
-                <ons-col style="margin: 10px">
-                  <ons-button modifier="large" class="login-button" id="signinbtn"
-                    style="background-color: rgb(233, 150, 41);">Sign In
-                  </ons-button>
-                </ons-col>
-                <ons-col style="margin: 10px">
-                  <ons-button modifier="large" class="login-button" onid="signup-button"
-                    style="background-color: rgb(233, 150, 41);" onclick="change_page1()">Sign Up
-                  </ons-button>
-                </ons-col>
-              </ons-row>
-              <br><br>
-              <center>
-                <div>OR</div>
-              </center>
-
-              <center>
-                <p style="margin-top:30px;">
-                  <ons-button class="button--large--cta" id="gmailbtn" style="width: 80%;background-color: red;">
-                    <ion-icon name="logo-google" size="32px,margin-left,material:24px"></ion-icon>Sign in with Google
-                  </ons-button>
-                </p>
-              </center>
-            </div>
-        </center>
-      </ons-card>
-
-    </ons-page>
-  </template>
-
+   
 
 
   <template id="ResturantList.html">

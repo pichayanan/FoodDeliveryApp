@@ -38,9 +38,36 @@ document.addEventListener('init', function (event) {
   var page = event.target;
 
 
+  if (page.id === 'page') {
+    console.log("page")
+    $("#backhomebtn").click(function () {
+      $("#content")[0].load("login.html");
+    });
+
+  }
   if (page.id === 'login') {
     console.log("login")
+    firebase.auth().onAuthStateChanged(function (user) {
+      if (user) {
+        // User is signed in.
+        var displayName = user.displayName;
+        var email = user.email;
+        var emailVerified = user.emailVerified;
+        var photoURL = user.photoURL;
+        var isAnonymous = user.isAnonymous;
+        var uid = user.uid;
+        var providerData = user.providerData;
+        // console.log(${email} User is signed in.);
 
+        $("#content")[0].load("index.html");
+        // ...
+      } else {
+        // User is signed out.
+        // ...
+        console.log("User is signed out.");
+    
+      }
+    });
     $("#signinbtn").click(function () {
       var username = $("#username").val();
       var password = $("#password").val();
