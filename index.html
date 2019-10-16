@@ -63,191 +63,200 @@
               <ons-icon icon="md-face"></ons-icon>
             </div>
           </ons-toolbar>
-          
-              <ons-card style="background-color: rgba(255, 235, 205, 0.37)">
-                <div class="content" style="text-align: center;">
-                  <div class="recomended">
-                      <h4>Recomended</h4>
-                      <ons-carousel auto-scroll auto-scroll-ratio="0.5" auto-refresh swipeable overscrollable item-width="130px"
-                          class="recomended_list" id="carousel">
-                          <ons-carousel-item modifier="nodivider" id="item1" class="recomended_item">
-                              <div class="thumbnail1" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/recommended%2Fkfc.jpg?alt=media&token=c7aa805f-6f03-4d1b-bc8e-0c0baee13523')">
-                              </div>
-                              <div class="recomended_item_title" id="item1_Name">KFC</div>
-                          </ons-carousel-item> 
-                          <ons-carousel-item modifier="nodivider" id="item2" class="recomended_item">
-                            <div class="thumbnail" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/recommended%2Fjapan.jpg?alt=media&token=72df14b4-bb16-4cc3-9f33-018c04361ae7')">
-        
-                            </div>
-                            <div class="recomended_item_title" id="item1_Name">Hajibang</div>
-                        </ons-carousel-item>
-                        <ons-carousel-item modifier="nodivider" id="item3" class="recomended_item">
-                            <div class="thumbnail" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/recommended%2Ffirerice.jpg?alt=media&token=346c4d69-5684-4012-a829-630ef7590ad7')">
-        
-                            </div>
-                            <div class="recomended_item_title" id="item1_Name">Wan Jai</div>
-                        </ons-carousel-item>
-                        <ons-carousel-item modifier="nodivider" id="item4" class="recomended_item">
-                            <div class="thumbnail3" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/recommended%2Fpizza.jpg?alt=media&token=d766fb91-0290-4fed-84c4-3beccd062418')">
-        
-                            </div>
-                            <div class="recomended_item_title" id="item1_Name">Pizza Hut</div>
-                        </ons-carousel-item>
-                        <ons-carousel-item modifier="nodivider" id="item5" class="recomended_item">
-                            <div class="thumbnail2" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/recommended%2Fsomtum.jpg?alt=media&token=c2c4ed11-031c-4538-8ab5-d4a602b4f866')" >
-        
-                            </div>
-                            <div class="recomended_item_title" id="item1_Name">Zab Somtum</div>
-                        </ons-carousel-item>               
-                      </ons-carousel>
-                  </div>
-                <ons-row>
-                  <ons-col>
-                    <ons-list-item tappable>
-                      <label class="left">
-                        <ons-checkbox input-id="check-1"></ons-checkbox>
-                      </label>
-                      <label for="check-1" class="center">
-                        Delivery
-                      </label>
-                    </ons-list-item>
-                  </ons-col>
-                  <ons-col>
-                    <ons-list-item tappable>
-                      <label class="left">
-                        <ons-checkbox input-id="check-2"></ons-checkbox>
-                      </label>
-                      <label for="check-2" class="center">
-                        Pick Up
-                      </label>
-                    </ons-list-item>
-                  </ons-col>
-                </ons-row>
-            <p style="text-align: center; margin-top: 10px;">
-              <ons-search-input placeholder="Search" onchange="ons.notification.alert('Searched for: ' + this.value)">
-              </ons-search-input>
-            </p>
-            
+
+          <ons-card style="background-color: rgba(255, 235, 205, 0.37)">
+            <div class="content" style="text-align: center;">
+              <div class="recomended">
+                <h4>Recomended</h4>
+                <ons-carousel auto-scroll auto-scroll-ratio="0.5" auto-refresh swipeable overscrollable
+                  item-width="130px" class="recomended_list" id="carousel">
+                  <ons-carousel-item modifier="nodivider" id="item1" class="recomended_item">
+                    <div class="thumbnail1"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/recommended%2Fkfc.jpg?alt=media&token=c7aa805f-6f03-4d1b-bc8e-0c0baee13523')">
+                    </div>
+                    <div class="recomended_item_title" id="item1_Name">KFC</div>
+                  </ons-carousel-item>
+                  <ons-carousel-item modifier="nodivider" id="item2" class="recomended_item">
+                    <div class="thumbnail"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/recommended%2Fjapan.jpg?alt=media&token=72df14b4-bb16-4cc3-9f33-018c04361ae7')">
+
+                    </div>
+                    <div class="recomended_item_title" id="item1_Name">Hajibang</div>
+                  </ons-carousel-item>
+                  <ons-carousel-item modifier="nodivider" id="item3" class="recomended_item">
+                    <div class="thumbnail"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/recommended%2Ffirerice.jpg?alt=media&token=346c4d69-5684-4012-a829-630ef7590ad7')">
+
+                    </div>
+                    <div class="recomended_item_title" id="item1_Name">Wan Jai</div>
+                  </ons-carousel-item>
+                  <ons-carousel-item modifier="nodivider" id="item4" class="recomended_item">
+                    <div class="thumbnail3"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/recommended%2Fpizza.jpg?alt=media&token=d766fb91-0290-4fed-84c4-3beccd062418')">
+
+                    </div>
+                    <div class="recomended_item_title" id="item1_Name">Pizza Hut</div>
+                  </ons-carousel-item>
+                  <ons-carousel-item modifier="nodivider" id="item5" class="recomended_item">
+                    <div class="thumbnail2"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/recommended%2Fsomtum.jpg?alt=media&token=c2c4ed11-031c-4538-8ab5-d4a602b4f866')">
+
+                    </div>
+                    <div class="recomended_item_title" id="item1_Name">Zab Somtum</div>
+                  </ons-carousel-item>
+                </ons-carousel>
+              </div>
+              <ons-row>
+                <ons-col>
+                  <ons-list-item tappable>
+                    <label class="left">
+                      <ons-checkbox input-id="check-1"></ons-checkbox>
+                    </label>
+                    <label for="check-1" class="center">
+                      Delivery
+                    </label>
+                  </ons-list-item>
+                </ons-col>
+                <ons-col>
+                  <ons-list-item tappable>
+                    <label class="left">
+                      <ons-checkbox input-id="check-2"></ons-checkbox>
+                    </label>
+                    <label for="check-2" class="center">
+                      Pick Up
+                    </label>
+                  </ons-list-item>
+                </ons-col>
+              </ons-row>
+              <p style="text-align: center; margin-top: 10px;">
+                <ons-search-input placeholder="Search" onchange="ons.notification.alert('Searched for: ' + this.value)">
+                </ons-search-input>
+              </p>
+
               <ons-row>
                 <ons-col>
                   <ons-card class="card" onclick="fn.pushPage({'id': 'ResturantList.html', 'title': 'ResturantList'})">
-                    <center> <div modifier="nodivider" id="item1" class="category_item"></div>
-                      <div class="imgcategory" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/category%2Ffastfood.jpg?alt=media&token=8697b36a-f129-482f-8c02-7024a28b2672')" >
-  
+                    <center>
+                      <div modifier="nodivider" id="item1" class="category_item"></div>
+                      <div class="imgcategory"
+                        style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/category%2Ffastfood.jpg?alt=media&token=8697b36a-f129-482f-8c02-7024a28b2672')">
+
                       </div>
                       <div class="category_item_title" id="item1_Name">Fast Food</div>
-                   
+
                     </center>
                   </ons-card>
                 </ons-col>
                 <ons-col>
                   <ons-card class="card">
-                    <center> <div modifier="nodivider" id="item2" class="category_item"></div>
-                      <div class="imgcategory" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/category%2Fchainese.jpg?alt=media&token=84ea2910-10b3-4c6d-a029-59cff36eb21a')" >
-  
+                    <center>
+                      <div modifier="nodivider" id="item2" class="category_item"></div>
+                      <div class="imgcategory"
+                        style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/category%2Fchainese.jpg?alt=media&token=84ea2910-10b3-4c6d-a029-59cff36eb21a')">
+
                       </div>
                       <div class="category_item_title" id="item1_Name">Chainese Food</div>
-                   
+
                     </center>
                   </ons-card>
                 </ons-col>
               </ons-row>
-            <ons-row>
-              <ons-col>
-                <ons-card class="card">
-                  <center> <div modifier="nodivider" id="item3" class="category_item"></div>
-                    <div class="imgcategory" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/category%2Fjapan.jpg?alt=media&token=9a749670-4604-4000-9932-59ca3a9919f7')" >
+              <ons-row>
+                <ons-col>
+                  <ons-card class="card">
+                    <center>
+                      <div modifier="nodivider" id="item3" class="category_item"></div>
+                      <div class="imgcategory"
+                        style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/category%2Fjapan.jpg?alt=media&token=9a749670-4604-4000-9932-59ca3a9919f7')">
 
-                    </div>
-                    <div class="category_item_title" id="item1_Name">JapaneseFood</div>
-                  </center>
-                </ons-card>
-              </ons-col>
-              <ons-col>
-                <ons-card>
-                  <center><div modifier="nodivider" id="item4" class="category_item"></div>
-                    <div class="imgcategory" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/category%2Fthai.jpg?alt=media&token=37a3a440-451f-4f7f-bbda-33d352008181')" >
+                      </div>
+                      <div class="category_item_title" id="item1_Name">JapaneseFood</div>
+                    </center>
+                  </ons-card>
+                </ons-col>
+                <ons-col>
+                  <ons-card>
+                    <center>
+                      <div modifier="nodivider" id="item4" class="category_item"></div>
+                      <div class="imgcategory"
+                        style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/category%2Fthai.jpg?alt=media&token=37a3a440-451f-4f7f-bbda-33d352008181')">
 
-                    </div>
-                    <div class="category_item_title" id="item1_Name">Thai Food</div>
-                    
-                  </center>
-                </ons-card>
-              </ons-col>
-           
-            </ons-row>
-          <ons-row>
-              <ons-col>
-                <ons-card>
-                  <center><div modifier="nodivider" id="item5" class="category_item"></div>
-                    <div class="imgcategory" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/category%2Fveget.jpg?alt=media&token=94b9759e-50be-4723-87a5-97fbba8fe801')" >
+                      </div>
+                      <div class="category_item_title" id="item1_Name">Thai Food</div>
 
-                    </div>
-                    <div class="category_item_title" id="item1_Name">vegetarian Food</div>
-                    
-                  </center>
-                </ons-card>
-              </ons-col>
-              <ons-col>
-                <ons-card>
-                  <center><div modifier="nodivider" id="item6" class="category_item"></div>
-                    <div class="imgcategory" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/category%2Fseafood.jpg?alt=media&token=5139f104-14f7-4480-96e2-cf2cfe57fcee')" >
+                    </center>
+                  </ons-card>
+                </ons-col>
 
-                    </div>
-                    <div class="category_item_title" id="item1_Name">SeaFood</div>
-                    
-                  </center>
-                </ons-card>
-              </ons-col>
-            </ons-row>
-            <ons-row>
-              <ons-col>
-                <ons-card>
-                  <center><div modifier="nodivider" id="item7" class="category_item"></div>
-                    <div class="imgcategory" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/category%2Fbeverage.jpg?alt=media&token=00f71559-d24b-4239-a735-40931e7b426b')" >
+              </ons-row>
+              <ons-row>
+                <ons-col>
+                  <ons-card>
+                    <center>
+                      <div modifier="nodivider" id="item5" class="category_item"></div>
+                      <div class="imgcategory"
+                        style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/category%2Fveget.jpg?alt=media&token=94b9759e-50be-4723-87a5-97fbba8fe801')">
 
-                    </div>
-                    <div class="category_item_title" id="item1_Name">Beverage</div>
-                    
-                  </center>
-                    
-                </ons-card>
-              </ons-col>
-              <ons-col>
-                <ons-card>
-                  <center><div modifier="nodivider" id="item8" class="category_item"></div>
-                    <div class="imgcategory" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/category%2Fdessert.jpg?alt=media&token=8a41dd9a-4c09-4b84-b090-ea56b8a8b0e2')" >
+                      </div>
+                      <div class="category_item_title" id="item1_Name">vegetarian Food</div>
 
-                    </div>
-                    <div class="category_item_title" id="item1_Name">Dessert</div
-                  </center>
-                </ons-card>
-              </ons-col>
-            </ons-row>
-          </ons-card>
+                    </center>
+                  </ons-card>
+                </ons-col>
+                <ons-col>
+                  <ons-card>
+                    <center>
+                      <div modifier="nodivider" id="item6" class="category_item"></div>
+                      <div class="imgcategory"
+                        style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/category%2Fseafood.jpg?alt=media&token=5139f104-14f7-4480-96e2-cf2cfe57fcee')">
 
+                      </div>
+                      <div class="category_item_title" id="item1_Name">SeaFood</div>
 
+                    </center>
+                  </ons-card>
+                </ons-col>
+              </ons-row>
+              <ons-row>
+                <ons-col>
+                  <ons-card>
+                    <center>
+                      <div modifier="nodivider" id="item7" class="category_item"></div>
+                      <div class="imgcategory"
+                        style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/category%2Fbeverage.jpg?alt=media&token=00f71559-d24b-4239-a735-40931e7b426b')">
 
+                      </div>
+                      <div class="category_item_title" id="item1_Name">Beverage</div>
 
+                    </center>
 
-        </ons-page>
-      </template>
-      <template id="About.html">
-        <ons-page id="About">
-          <ons-toolbar style="background-color:rgb(233, 163, 71)">
-            <div class="left">
-              <ons-toolbar-button onclick="fn.open()">
-                <ons-icon icon="md-menu"></ons-icon>
-              </ons-toolbar-button>
-            </div>
-            <div class="right" style="margin-right: 15px">
-              <ons-icon icon="md-face"></ons-icon>
-            </div>
-            <div class="center">
-              About
-            </div>
-          </ons-toolbar>
-        </ons-page>
+                  </ons-card>
+                </ons-col>
+                <ons-col>
+                  <ons-card>
+                    <center>
+                      <div modifier="nodivider" id="item8" class="category_item"></div>
+                      <div class="imgcategory"
+                        style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/category%2Fdessert.jpg?alt=media&token=8a41dd9a-4c09-4b84-b090-ea56b8a8b0e2')">
+
+                      </div>
+                      <div class="category_item_title" id="item1_Name">Dessert</div </center> </ons-card> </ons-col>
+                        </ons-row> </ons-card> </ons-page> </template> <template id="About.html">
+                      <ons-page id="About">
+                        <ons-toolbar style="background-color:rgb(233, 163, 71)">
+                          <div class="left">
+                            <ons-toolbar-button onclick="fn.open()">
+                              <ons-icon icon="md-menu"></ons-icon>
+                            </ons-toolbar-button>
+                          </div>
+                          <div class="right" style="margin-right: 15px">
+                            <ons-icon icon="md-face"></ons-icon>
+                          </div>
+                          <div class="center">
+                            About
+                          </div>
+                        </ons-toolbar>
+                      </ons-page>
       </template>
     </ons-page>
   </template>
@@ -324,7 +333,7 @@
               </ons-button>
             </ons-col>
           </ons-row>
-          
+
         </div>
       </ons-card>
 
@@ -353,17 +362,19 @@
         </ons-list-header>
 
         <ons-list class="list">
-          <ons-card  onclick="fn.pushPage({'id': 'ResturantMenu.html', 'title': 'ResturantMenu'})"
+          <ons-card onclick="fn.pushPage({'id': 'ResturantMenu.html', 'title': 'ResturantMenu'})"
             style="background-color: rgba(255, 235, 205, 0.37)">
 
             <ons-list-item modifier="chevron" tappable>
-              <ons-row  >
-                <ons-col >
-                  <left><div modifier="chevron" id="item1" class="list_item"></div>
-                    <div class="imglist" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/logo%2Fkfc.jpg?alt=media&token=f6f0597d-5afb-43ff-a300-ad3948a647e8')" >
+              <ons-row>
+                <ons-col>
+                  <left>
+                    <div modifier="chevron" id="item1" class="list_item"></div>
+                    <div class="imglist"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/logo%2Fkfc.jpg?alt=media&token=f6f0597d-5afb-43ff-a300-ad3948a647e8')">
 
                     </div>
-                    </left>
+                  </left>
                   <left>
                     <div class="list_item_title" id="item1_Name">KFC</div>
                   </left>
@@ -373,7 +384,8 @@
                 </ons-col>
                 <ons-col></ons-col>
                 <ons-col style="margin-top: 20px">
-                <div class="imgrate" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/rate%2Fstar4.png?alt=media&token=e1b267a9-26d9-45ba-82b4-fc30742dadd1')" >
+                  <div class="imgrate"
+                    style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/rate%2Fstar4.png?alt=media&token=e1b267a9-26d9-45ba-82b4-fc30742dadd1')">
 
                   </div>
 
@@ -390,10 +402,13 @@
             <ons-list-item modifier="chevron" tappable>
               <ons-row style="border: none">
                 <ons-col>
-                  <left><div modifier="chevron" id="item2" class="list_item"></div>
-                    <div class="imglist1" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/logo%2Fthe-true-story-behind-the-mysterious-mcdonalds-gold-card-673955074-Vytautas-Kielaitis-1024x683.jpg?alt=media&token=9a4dd6d7-bfcf-47e4-a345-2776362e59c7')" >
+                  <left>
+                    <div modifier="chevron" id="item2" class="list_item"></div>
+                    <div class="imglist1"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/logo%2Fthe-true-story-behind-the-mysterious-mcdonalds-gold-card-673955074-Vytautas-Kielaitis-1024x683.jpg?alt=media&token=9a4dd6d7-bfcf-47e4-a345-2776362e59c7')">
 
-                    </div></left>
+                    </div>
+                  </left>
                   <left>
                     <div class="list_item_title" id="item1_Name">Mc Donald's</div>
                   </left>
@@ -403,7 +418,8 @@
                 </ons-col>
                 <ons-col></ons-col>
                 <ons-col style="margin-top: 20px">
-                  <div class="imgrate" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/rate%2Fstar4.png?alt=media&token=e1b267a9-26d9-45ba-82b4-fc30742dadd1')" >
+                  <div class="imgrate"
+                    style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/rate%2Fstar4.png?alt=media&token=e1b267a9-26d9-45ba-82b4-fc30742dadd1')">
 
                   </div>
                 </ons-col>
@@ -418,23 +434,29 @@
             <ons-list-item modifier="chevron" tappable>
               <ons-row style="border: none">
                 <ons-col>
-                  <left><div modifier="chevron" id="item3" class="list_item"></div>
-                    <div class="imglist" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/logo%2FSizzler.jpg?alt=media&token=8d3aada4-e518-4fe4-8f1d-4da4587e3158')" >
-
-                    </div></left>
                   <left>
-                      <div class="list_item_title" id="item1_Name">Sizzler</div>
-                    
+                    <div modifier="chevron" id="item3" class="list_item"></div>
+                    <div class="imglist"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/logo%2FSizzler.jpg?alt=media&token=8d3aada4-e518-4fe4-8f1d-4da4587e3158')">
+
+                    </div>
                   </left>
                   <left>
-                      <div class="list_title" id="item1_title"> Free delivery </div>
+                    <div class="list_item_title" id="item1_Name">Sizzler</div>
+
+                  </left>
+                  <left>
+                    <div class="list_title" id="item1_title"> Free delivery </div>
                   </left>
                 </ons-col>
                 <ons-col></ons-col>
                 <ons-col style="margin-top: 20px">
-                  <right><div class="imgrate" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/rate%2Fstar5.png?alt=media&token=c1f0beac-33c8-4628-8a8d-b9c7c40e969d')" >
+                  <right>
+                    <div class="imgrate"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/rate%2Fstar5.png?alt=media&token=c1f0beac-33c8-4628-8a8d-b9c7c40e969d')">
 
-                  </div></right>
+                    </div>
+                  </right>
                 </ons-col>
               </ons-row>
 
@@ -447,22 +469,28 @@
             <ons-list-item modifier="chevron" tappable>
               <ons-row style="border: none">
                 <ons-col>
-                  <left><div modifier="chevron" id="item4" class="list_item"></div>
-                    <div class="imglist" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/logo%2Fhut.jpg?alt=media&token=5c3ace89-5542-4ff5-9c2b-005c6e0d51a3')" >
-
-                    </div></left>
                   <left>
-                      <div class="list_item_title" id="item1_Name">Pizza Huts</div>
+                    <div modifier="chevron" id="item4" class="list_item"></div>
+                    <div class="imglist"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/logo%2Fhut.jpg?alt=media&token=5c3ace89-5542-4ff5-9c2b-005c6e0d51a3')">
+
+                    </div>
                   </left>
                   <left>
-                      <div class="list_title" id="item1_title"> Free delivery </div>
+                    <div class="list_item_title" id="item1_Name">Pizza Huts</div>
+                  </left>
+                  <left>
+                    <div class="list_title" id="item1_title"> Free delivery </div>
                   </left>
                 </ons-col>
                 <ons-col></ons-col>
                 <ons-col style="margin-top: 20px">
-                  <right><div class="imgrate" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/rate%2Fstar3.png?alt=media&token=77a40035-7c0e-479c-8d33-3eccbe0237bb')" >
+                  <right>
+                    <div class="imgrate"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/rate%2Fstar3.png?alt=media&token=77a40035-7c0e-479c-8d33-3eccbe0237bb')">
 
-                  </div></right>
+                    </div>
+                  </right>
                 </ons-col>
               </ons-row>
           </ons-card>
@@ -473,23 +501,29 @@
             <ons-list-item modifier="chevron" tappable>
               <ons-row style="border: none">
                 <ons-col>
-                  <left><div modifier="chevron" id="item5" class="list_item"></div>
-                    <div class="imglist" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/logo%2Fberger.png?alt=media&token=a97d4e41-160a-48f6-8050-7ad296e3fddd')" >
-
-                    </div></left>
                   <left>
-                      <div class="list_item_title" id="item1_Name">Burger King</div>
-                    
+                    <div modifier="chevron" id="item5" class="list_item"></div>
+                    <div class="imglist"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/logo%2Fberger.png?alt=media&token=a97d4e41-160a-48f6-8050-7ad296e3fddd')">
+
+                    </div>
                   </left>
                   <left>
-                      <div class="list_title" id="item1_title"> Free delivery </div>
+                    <div class="list_item_title" id="item1_Name">Burger King</div>
+
+                  </left>
+                  <left>
+                    <div class="list_title" id="item1_title"> Free delivery </div>
                   </left>
                 </ons-col>
                 <ons-col></ons-col>
                 <ons-col style="margin-top: 20px">
-                  <right><div class="imgrate" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/rate%2Fstar4.png?alt=media&token=e1b267a9-26d9-45ba-82b4-fc30742dadd1')" >
+                  <right>
+                    <div class="imgrate"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/rate%2Fstar4.png?alt=media&token=e1b267a9-26d9-45ba-82b4-fc30742dadd1')">
 
-                  </div></right>
+                    </div>
+                  </right>
                 </ons-col>
               </ons-row>
 
@@ -502,22 +536,28 @@
             <ons-list-item modifier="chevron" tappable>
               <ons-row style="border: none">
                 <ons-col>
-                  <left><div modifier="chevron" id="item6" class="list_item"></div>
-                    <div class="imglist2" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/logo%2Fsubway.jpg?alt=media&token=72a0a607-c55c-403a-83b2-516b10ee268e')" >
-
-                    </div></left>
                   <left>
-                      <div class="list_item_title" id="item1_Name">Subway</div>
+                    <div modifier="chevron" id="item6" class="list_item"></div>
+                    <div class="imglist2"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/logo%2Fsubway.jpg?alt=media&token=72a0a607-c55c-403a-83b2-516b10ee268e')">
+
+                    </div>
                   </left>
                   <left>
-                      <div class="list_title" id="item1_title"> Free delivery </div>
+                    <div class="list_item_title" id="item1_Name">Subway</div>
+                  </left>
+                  <left>
+                    <div class="list_title" id="item1_title"> Free delivery </div>
                   </left>
                 </ons-col>
                 <ons-col></ons-col>
                 <ons-col style="margin-top: 20px">
-                  <right><div class="imgrate" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/rate%2Fstar3.png?alt=media&token=77a40035-7c0e-479c-8d33-3eccbe0237bb')" >
+                  <right>
+                    <div class="imgrate"
+                      style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/rate%2Fstar3.png?alt=media&token=77a40035-7c0e-479c-8d33-3eccbe0237bb')">
 
-                  </div></right>
+                    </div>
+                  </right>
                 </ons-col>
               </ons-row>
           </ons-card>
@@ -545,24 +585,30 @@
       <ons-card style="background-color: rgba(255, 235, 205, 0.37)">
         <ons-row style="border: none">
           <ons-col>
-            <left><div modifier="chevron" id="item1" class="list_item"></div>
-              <div class="imglist" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/logo%2Fkfc.jpg?alt=media&token=f6f0597d-5afb-43ff-a300-ad3948a647e8')" >
+            <left>
+              <div modifier="chevron" id="item1" class="list_item"></div>
+              <div class="imglist"
+                style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/logo%2Fkfc.jpg?alt=media&token=f6f0597d-5afb-43ff-a300-ad3948a647e8')">
 
-              </div></left>
+              </div>
+            </left>
 
           </ons-col>
           <ons-col>
             <left>
-                <div class="list_item_title" id="item1_Name">KFC</div>
+              <div class="list_item_title" id="item1_Name">KFC</div>
             </left>
             <left>
-                <div class="list_title" id="item1_title"> Free delivery </div>
+              <div class="list_title" id="item1_title"> Free delivery </div>
             </left>
           </ons-col>
           <ons-col>
-            <center><div class="imgrate" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/rate%2Fstar4.png?alt=media&token=e1b267a9-26d9-45ba-82b4-fc30742dadd1')" >
+            <center>
+              <div class="imgrate"
+                style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/rate%2Fstar4.png?alt=media&token=e1b267a9-26d9-45ba-82b4-fc30742dadd1')">
 
-            </div></center>
+              </div>
+            </center>
             <br>
 
 
@@ -584,10 +630,13 @@
             </ons-col>
 
             <ons-col>
-              <center><div modifier="chevron" id="item1" class="menu_item"></div>
-                <div class="imgmenu" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/KFC%2FMayo.png?alt=media&token=df538860-f68b-4872-a562-1eb128b44a6d')" >
-  
-                </div></center>
+              <center>
+                <div modifier="chevron" id="item1" class="menu_item"></div>
+                <div class="imgmenu"
+                  style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/KFC%2FMayo.png?alt=media&token=df538860-f68b-4872-a562-1eb128b44a6d')">
+
+                </div>
+              </center>
             </ons-col>
 
           </ons-row>
@@ -620,10 +669,13 @@
             </ons-col>
 
             <ons-col>
-              <center><div modifier="chevron" id="item2" class="menu_item"></div>
-                <div class="imgmenu" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/KFC%2Fwick.png?alt=media&token=3d4157ff-6466-47c9-a5eb-2d22e6cfc16c')" >
-  
-                </div></center>
+              <center>
+                <div modifier="chevron" id="item2" class="menu_item"></div>
+                <div class="imgmenu"
+                  style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/KFC%2Fwick.png?alt=media&token=3d4157ff-6466-47c9-a5eb-2d22e6cfc16c')">
+
+                </div>
+              </center>
             </ons-col>
 
           </ons-row>
@@ -660,10 +712,13 @@
             </ons-col>
 
             <ons-col>
-              <center><div modifier="chevron" id="item3" class="menu_item"></div>
-                <div class="imgmenu" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/KFC%2Fbowlsp.png?alt=media&token=0054bfb2-3de9-4aea-b5eb-698ca85a70bf')" >
-  
-                </div></center>
+              <center>
+                <div modifier="chevron" id="item3" class="menu_item"></div>
+                <div class="imgmenu"
+                  style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/KFC%2Fbowlsp.png?alt=media&token=0054bfb2-3de9-4aea-b5eb-698ca85a70bf')">
+
+                </div>
+              </center>
             </ons-col>
 
           </ons-row>
@@ -696,10 +751,13 @@
             </ons-col>
 
             <ons-col>
-              <center><div modifier="chevron" id="item4" class="menu_item"></div>
-                <div class="imgmenu" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/KFC%2FFishsp.png?alt=media&token=ec013215-7737-4f5d-9e8e-f2a0cff6def6')" >
-  
-                </div></center>
+              <center>
+                <div modifier="chevron" id="item4" class="menu_item"></div>
+                <div class="imgmenu"
+                  style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/KFC%2FFishsp.png?alt=media&token=ec013215-7737-4f5d-9e8e-f2a0cff6def6')">
+
+                </div>
+              </center>
             </ons-col>
 
           </ons-row>
@@ -720,82 +778,90 @@
 
           </ons-row>
         </ons-card>
-        
+
         <ons-list-header style="background-color: rgb(165, 93, 42)">
-            <h5>Burger</h5>
-          </ons-list-header>
-          <ons-card>
-            <ons-row>
-              <ons-col>
-                <div class="left">
-                  <h5>Double Cheese Zinger Burger</h5>
-                  <h7>
-                      An irresistible Zinger Burger is now more flavorful with 2 pcs. of Cheddar Cheese. Can't miss!! (Price per piece).
-                  </h7>
+          <h5>Burger</h5>
+        </ons-list-header>
+        <ons-card>
+          <ons-row>
+            <ons-col>
+              <div class="left">
+                <h5>Double Cheese Zinger Burger</h5>
+                <h7>
+                  An irresistible Zinger Burger is now more flavorful with 2 pcs. of Cheddar Cheese. Can't miss!! (Price
+                  per piece).
+                </h7>
+              </div>
+            </ons-col>
+
+            <ons-col>
+              <center>
+                <div modifier="chevron" id="item5" class="menu_item"></div>
+                <div class="imgmenu"
+                  style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/KFC%2F1Burger.png?alt=media&token=d8209ef8-3f8a-4e4c-9b96-3ef6715a0fc4')">
+
                 </div>
-              </ons-col>
-  
-              <ons-col>
-                <center><div modifier="chevron" id="item5" class="menu_item"></div>
-                  <div class="imgmenu" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/KFC%2F1Burger.png?alt=media&token=d8209ef8-3f8a-4e4c-9b96-3ef6715a0fc4')" >
-    
-                  </div></center>
-              </ons-col>
-  
-            </ons-row>
-  
-            <ons-row>
-              <ons-col>
-  
-              </ons-col>
-              <ons-col>
-                ฿79.00
-                <right>
-                  <ons-toolbar-button>-</ons-toolbar-button>
-                  1
-                  <ons-toolbar-button>+</ons-toolbar-button>
-                </right>
-              </ons-col>
-  
-  
-            </ons-row>
-          </ons-card>
-          <ons-card>
-            <ons-row>
-              <ons-col>
-                <div class="left">
-                  <h5>Double Cheese Krispy Fish Burger</h5>
-                  <h7>
-                      An Alaskan Pollock Fish Fillet Fried with 2pcs. Of Cheddar Cheese topped with Tartar Sauce and Lettuce. (Price per piece).
-                  </h7>
+              </center>
+            </ons-col>
+
+          </ons-row>
+
+          <ons-row>
+            <ons-col>
+
+            </ons-col>
+            <ons-col>
+              ฿79.00
+              <right>
+                <ons-toolbar-button>-</ons-toolbar-button>
+                1
+                <ons-toolbar-button>+</ons-toolbar-button>
+              </right>
+            </ons-col>
+
+
+          </ons-row>
+        </ons-card>
+        <ons-card>
+          <ons-row>
+            <ons-col>
+              <div class="left">
+                <h5>Double Cheese Krispy Fish Burger</h5>
+                <h7>
+                  An Alaskan Pollock Fish Fillet Fried with 2pcs. Of Cheddar Cheese topped with Tartar Sauce and
+                  Lettuce. (Price per piece).
+                </h7>
+              </div>
+            </ons-col>
+
+            <ons-col>
+              <center>
+                <div modifier="chevron" id="item6" class="menu_item"></div>
+                <div class="imgmenu"
+                  style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/KFC%2FBurger_Fish.png?alt=media&token=23112dad-3490-4b62-87d1-fe33e9e639e0')">
+
                 </div>
-              </ons-col>
-  
-              <ons-col>
-                <center><div modifier="chevron" id="item6" class="menu_item"></div>
-                  <div class="imgmenu" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/KFC%2FBurger_Fish.png?alt=media&token=23112dad-3490-4b62-87d1-fe33e9e639e0')" >
-    
-                  </div></center>
-              </ons-col>
-  
-            </ons-row>
-  
-            <ons-row>
-              <ons-col>
-  
-              </ons-col>
-              <ons-col>
-                ฿79.00
-                <right>
-                  <ons-toolbar-button>-</ons-toolbar-button>
-                  0
-                  <ons-toolbar-button>+</ons-toolbar-button>
-                </right>
-              </ons-col>
-  
-  
-            </ons-row>
-          </ons-card>
+              </center>
+            </ons-col>
+
+          </ons-row>
+
+          <ons-row>
+            <ons-col>
+
+            </ons-col>
+            <ons-col>
+              ฿79.00
+              <right>
+                <ons-toolbar-button>-</ons-toolbar-button>
+                0
+                <ons-toolbar-button>+</ons-toolbar-button>
+              </right>
+            </ons-col>
+
+
+          </ons-row>
+        </ons-card>
 
 
         <ons-row>
@@ -907,7 +973,7 @@
             <h3>Pay With</h3>
           </ons-col>
         </center>
-        <ons-button modifier="large" class="login-button" id="ccard">Credit Card
+        <ons-button modifier="large" class="login-button" id="ccard" onclick="change_page4()">Credit Card
         </ons-button>
         <br>
         <center>
@@ -916,7 +982,7 @@
           </h5>
         </center>
         <br>
-        <ons-button modifier="large" class="login-button" id="cash">Cash On Delivery
+        <ons-button modifier="large" class="login-button" id="cash" onclick="change_page5()">Cash On Delivery
         </ons-button>
         <br><br>
 
@@ -953,48 +1019,57 @@
       document.querySelector('#myNavigator').pushPage('OrderComfirmmation.html', { animation: "lift" });
 
     }
+    function change_page4() {
 
+      document.querySelector('#myNavigator').pushPage('page.html', { animation: "lift" });
+
+    }
+    function change_page5() {
+
+      document.querySelector('#myNavigator').pushPage('page.html', { animation: "lift" });
+
+    }
     function pop_page() {
       document.querySelector('#myNavigator').popPage();
     }
 
     window.fn = {};
 
-window.fn.open = function() {
-  var menu = document.getElementById('menu');
-  menu.open();
-};
+    window.fn.open = function () {
+      var menu = document.getElementById('menu');
+      menu.open();
+    };
 
-window.fn.load = function(page) {
-  var content = document.getElementById('content');
-  var menu = document.getElementById('menu');
-  content.load(page)
-    .then(menu.close.bind(menu));
+    window.fn.load = function (page) {
+      var content = document.getElementById('content');
+      var menu = document.getElementById('menu');
+      content.load(page)
+        .then(menu.close.bind(menu));
 
-    
-};
 
-window.fn.pushPage = function (page, anim) {
-  if (anim) {
-    document.getElementById('myNavigator').pushPage(page.id, { data: { title: page.title }, animation: anim });
-  } else {
-    document.getElementById('myNavigator').pushPage(page.id, { data: { title: page.title } });
-  }
-};
+    };
+
+    window.fn.pushPage = function (page, anim) {
+      if (anim) {
+        document.getElementById('myNavigator').pushPage(page.id, { data: { title: page.title }, animation: anim });
+      } else {
+        document.getElementById('myNavigator').pushPage(page.id, { data: { title: page.title } });
+      }
+    };
   </script>
 
 
 
 
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="/__/firebase/7.2.0/firebase-app.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="/__/firebase/7.2.0/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+  <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="/__/firebase/7.2.0/firebase-analytics.js"></script>
+  <script src="/__/firebase/7.2.0/firebase-analytics.js"></script>
 
-<!-- Initialize Firebase -->
-<script src="/__/firebase/init.js"></script>
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
 
 </body>
 
