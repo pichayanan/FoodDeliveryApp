@@ -12,94 +12,119 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 var db = firebase.firestore();
 
-var provider = new firebase.auth.GoogleAuthProvider();
-provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
-
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    // User is signed in.
-    //var displayName = user.displayName;
-    var email = user.email;
-    console.log(email + "signed in");
-    // var emailVerified = user.emailVerified;
-    // var photoURL = user.photoURL;
-    // var isAnonymous = user.isAnonymous;
-    // var uid = user.uid;
-    // var providerData = user.providerData;
-    // ...
-  } else {
-    console.log("sign out");
-    // User is signed out.
-    // ...
-  }
-});
-
 document.addEventListener('init', function (event) {
   var page = event.target;
+ 
+
+  if (page.id === 'Foodcategory') {
+    console.log("FoodCategory");
+
+    // $("#menubtn").click(function () {
+    //   $("#sidemenu")[0].open();
+    // });
 
 
-  if (page.id === 'page') {
-    console.log("page")
-    $("#backhomebtn").click(function () {
+    $("#carousel").empty();
+    db.collection("recommended").get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        var item = `<ons-carousel-item modifier="nodivider" id="item${doc.data().id}" class="recomended_item">
+          <div class="thumbnail" style="background-image: url('${doc.data().url}')">
+          </div>
+          <div class="recomended_item_title" id="item1_${doc.data().id}">${doc.data().Name}</div>
+      </ons-carousel-item>`
+        $("#carousel").append(item);
+      });
+    });
+
+  }
+
+
+  if (page.id === 'register') {
+    console.log("register");
+  
+      $("#signup-buttons").click(function () {
+  
+        var email = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+  
+          if (errorCode === 'auth/weak-password') {
+            alert('The password is too weak');
+  
+          } else {
+            alert(errorMessage);
+            content.load('login.html');
+          }
+          console.log(error);
+  
+        });
+  
+  
+      });
+  
+      
+    
+   
+  }
+
+  if (page.id === 'menu') {
+    console.log("menu");
+
+    $("#login").click(function () {
       $("#content")[0].load("login.html");
+      $("#menu")[0].close();
+    });
+
+    $("#logout").click(function () {
+      //firebase sign out
+      firebase.auth().signOut().then(function () {
+        // Sign-out successful.
+        $("#content")[0].load("login.html");
+        $("#menu")[0].close();
+      }).catch(function (error) {
+        // An error happened.
+        console.log(error.message);
+      });
     });
 
   }
   if (page.id === 'login') {
-    console.log("login")
-    firebase.auth().onAuthStateChanged(function (user) {
-      if (user) {
-        // User is signed in.
-        var displayName = user.displayName;
-        var email = user.email;
-        var emailVerified = user.emailVerified;
-        var photoURL = user.photoURL;
-        var isAnonymous = user.isAnonymous;
-        var uid = user.uid;
-        var providerData = user.providerData;
-        // console.log(${email} User is signed in.);
-
-        $("#content")[0].load("index.html");
-        // ...
-      } else {
-        // User is signed out.
-        // ...
-        console.log("User is signed out.");
+    console.log("login");
     
-      }
+    $("#signup-button").click(function () {
+      $("#content")[0].load("register.html");
+      $("#menu")[0].close();
     });
+
     $("#signinbtn").click(function () {
-      var username = $("#username").val();
+      var email = $("#username").val();
       var password = $("#password").val();
+      firebase.auth().signInWithEmailAndPassword(email, password).then(function () {
+        content.load('splitter.html');
+
+      }
+      )
+
+        .catch(function (error) {
+         
+          console.log(error.message);
+        });
 
 
-      firebase.auth().signInWithEmailAndPassword(username, password)
-        .then(function (result) {
-          console.log(result);
-         $("#signinbtn").click(function(){
-         var username = $("#username").val();
-         var password = $("#password").val();
-         firebase.auth().signInWithEmailAndPassword(username, password).catch(function(error) {
-
-        console.log(error.message);
-      });
 
     })
-    });
-    });
 
-    $('#gmailbtn').click( function googleLogin() {
-      firebase.auth().signInWithRedirect(provider);
-      firebase.auth().getRedirectResult().then(function(result) {
-        if (result.credential) {
-          // This gives you a Google Access Token. You can use it to access the Google API.
-          var token = result.credential.accessToken;
-          // ...
-        }
+    $("#gbtn").click(function () {
+      var provider = new firebase.auth.GoogleAuthProvider();
+      firebase.auth().signInWithPopup(provider).then(function(result) {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        var token = result.credential.accessToken;
         // The signed-in user info.
         var user = result.user;
-        console.log('user'+token);
-        
+        content.load('splitter.html');
       }).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
@@ -109,26 +134,13 @@ document.addEventListener('init', function (event) {
         // The firebase.auth.AuthCredential type that was used.
         var credential = error.credential;
         // ...
-        console.log('error'+errorCode);
       });
     });
-  
+
   }
 
+  
 });
-
-$("#carousel").empty();
-db.collection("recommended").get().then((querySnapshot) => {
-  querySnapshot.forEach((doc) => {
-    var item = `<ons-carousel-item modifier="nodivider" id="item${doc.data().id}" class="recomended_item">
-          <div class="thumbnail" style="background-image: url('${doc.data().url}')">
-          </div>
-          <div class="recomended_item_title" id="item1_${doc.data().id}">${doc.data().Name}</div>
-      </ons-carousel-item>`
-    $("#carousel").append(item);
-  });
-});
-
 $("#card").empty();
 db.collection("category").get().then((querySnapshot) => {
   querySnapshot.forEach((doc) => {
@@ -182,5 +194,26 @@ db.collection("LOGO").get().then((querySnapshot) => {
   });
 });
 
+window.fn = {};
+
+window.fn.open = function () {
+  var menu = document.getElementById('menu');
+  menu.open();
+};
+
+window.fn.load = function (page) {
+  var content = document.getElementById('content');
+  var menu = document.getElementById('menu');
+  content.load(page)
+    .then(menu.close.bind(menu));
+};
+
+window.fn.pushPage = function (page, anim) {
+  if (anim) {
+    document.getElementById('myNavigator').pushPage(page.id, { data: { title: page.title }, animation: anim });
+  } else {
+    document.getElementById('myNavigator').pushPage(page.id, { data: { title: page.title } });
+  }
+};
 
 
