@@ -1,12 +1,12 @@
 var firebaseConfig = {
-  apiKey: "AIzaSyBGWQ0ZvH0R6NFUAS_CqmgIyV_hSPBzUJk",
-  authDomain: "fooddeliveryapp-51a8d.firebaseapp.com",
-  databaseURL: "https://fooddeliveryapp-51a8d.firebaseio.com",
-  projectId: "fooddeliveryapp-51a8d",
-  storageBucket: "fooddeliveryapp-51a8d.appspot.com",
-  messagingSenderId: "192100795693",
-  appId: "1:192100795693:web:7baae6ed79369e7260bfa4",
-  measurementId: "G-6ZJXM0ELTY"
+  apiKey: "AIzaSyAhnxEnrff2-CGUCk8P4NTkV8lbh2kNCKg",
+  authDomain: "fooddeliveryapp-f6bbf.firebaseapp.com",
+  databaseURL: "https://fooddeliveryapp-f6bbf.firebaseio.com",
+  projectId: "fooddeliveryapp-f6bbf",
+  storageBucket: "fooddeliveryapp-f6bbf.appspot.com",
+  messagingSenderId: "258700573269",
+  appId: "1:258700573269:web:9344b5209f5d334ee4b2dc",
+  measurementId: "G-8TXBCM448L"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -46,8 +46,11 @@ document.addEventListener('init', function (event) {
   
         var email = document.getElementById('username').value;
         var password = document.getElementById('password').value;
-        firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
-          // Handle Errors here.
+        firebase.auth().createUserWithEmailAndPassword(email, password).then(function () {
+          content.load('FoodCategory.html');
+        })
+
+        .catch(function (error) {
           var errorCode = error.code;
           var errorMessage = error.message;
   
@@ -58,23 +61,28 @@ document.addEventListener('init', function (event) {
             alert(errorMessage);
             content.load('login.html');
           }
-          console.log(error);
   
         });
+        });
+
+
+
+   
+          // Handle Errors here.
+          
   
-  
-      });
+      };
   
       
     
    
-  }
+  
 
   if (page.id === 'menu') {
     console.log("menu");
 
     $("#login").click(function () {
-      $("#content")[0].load("login.html");
+      content.load('login.html');
       $("#menu")[0].close();
     });
 
@@ -82,7 +90,7 @@ document.addEventListener('init', function (event) {
       //firebase sign out
       firebase.auth().signOut().then(function () {
         // Sign-out successful.
-        $("#content")[0].load("login.html");
+        content.load('login.html');
         $("#menu")[0].close();
       }).catch(function (error) {
         // An error happened.
@@ -95,7 +103,7 @@ document.addEventListener('init', function (event) {
     console.log("login");
     
     $("#signup-button").click(function () {
-      $("#content")[0].load("register.html");
+      content.load('register.html');
       $("#menu")[0].close();
     });
 
@@ -103,7 +111,7 @@ document.addEventListener('init', function (event) {
       var email = $("#username").val();
       var password = $("#password").val();
       firebase.auth().signInWithEmailAndPassword(email, password).then(function () {
-        content.load('splitter.html');
+        content.load('FoodCategory.html');
 
       }
       )
@@ -124,7 +132,7 @@ document.addEventListener('init', function (event) {
         var token = result.credential.accessToken;
         // The signed-in user info.
         var user = result.user;
-        content.load('splitter.html');
+        content.load('FoodCategory.html');
       }).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
