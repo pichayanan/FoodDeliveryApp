@@ -38,10 +38,18 @@
                 </div>
               </center>
               <br>
+              
+                      
+               
+              <nav class="navbar navbar-inverse bg-inverse fixed-top bg-faded">
+                <div class="row">
+                    
               <div class="col">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button><button class="clear-cart btn btn-danger">Clear Cart</button></div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart" onclick="fn.pushPage({'id': 'OrderConfirm.html', 'title': 'OrderConfirm'})">Cart (<span class="total-count"></span>)</button>
+                <button class="clear-cart btn btn-danger">Clear Cart</button></div>
           </div>
-  
+        </div>
+      </nav>
             </ons-col>
           </ons-row>
   
@@ -50,14 +58,12 @@
           </ons-list-header>
           <ons-card>
             <ons-row>
-              <ons-col>
-                <div class="left">
-                  <h5>Crispy Strips Sassy Mayo</h5>
-                  <h7>
-                    2 pcs crispy chicken topped with sassy mayo sauce.
-                  </h7>
-                </div>
-              </ons-col>
+                <ons-col>
+                    <div class="left">
+                      <h5>ไก่กรอบซอสมาโย</h5>
+                      
+                    </div>
+                  </ons-col>
   
               <ons-col>
                 <center>
@@ -76,19 +82,17 @@
                     ฿39.00
                 </ons-col>
                 <ons-col>
-                   <a href="#" data-name="Crispy Strips Sassy Mayo" data-price="39" class="add-to-cart btn btn-primary">Add to cart</a>
+                   <a href="#" data-name="ไก่กรอบซอสมาโย" data-price="39" class="add-to-cart btn btn-primary">Add to cart</a>
                   
                  
                 </ons-col>
-    
-    
               </ons-row>
           </ons-card>
           <ons-card>
             <ons-row>
               <ons-col>
                 <div class="left">
-                  <h5>WingZ Zabb</h5>
+                  <h5>ไก่วิงซ์แซ่บ</h5>
                   <h7>
                     3 pcs
                   </h7>
@@ -112,7 +116,7 @@
                   ฿49.00
               </ons-col>
               <ons-col>
-                 <a href="#" data-name="WingZ Zabb" data-price="49" class="add-to-cart btn btn-primary">Add to cart</a>
+                 <a href="#" data-name="ไก่วิงซ์แซ่บ" data-price="49" class="add-to-cart btn btn-primary">Add to cart</a>
                 
                
               </ons-col>
@@ -128,10 +132,8 @@
             <ons-row>
               <ons-col>
                 <div class="left">
-                  <h5>Spicy Chicken Rice Bowl </h5>
-                  <h7>
-                    Fried Chicken Mixed Well with Special Spicy Sauce And Shallot.
-                  </h7>
+                  <h5>ข้าวยำไก่แซ่บ </h5>
+                  
                 </div>
               </ons-col>
   
@@ -152,7 +154,7 @@
                     ฿59.00
                 </ons-col>
                 <ons-col>
-                   <a href="#" data-name="Spicy Chicken Rice Bowl" data-price="59" class="add-to-cart btn btn-primary">Add to cart</a>
+                   <a href="#" data-name="ข้าวยำไก่แซ่บ" data-price="59" class="add-to-cart btn btn-primary">Add to cart</a>
                   
                  
                 </ons-col>
@@ -164,10 +166,8 @@
             <ons-row>
               <ons-col>
                 <div class="left">
-                  <h5>Spicy Zabb Fish Rice Bowl</h5>
-                  <h7>
-                    Fried Alaska Pollock Fish Fillet,Topped With Spicy Sauce And Shallot.
-                  </h7>
+                  <h5>ข้าวยำปลาแซ่บ</h5>
+                  
                 </div>
               </ons-col>
   
@@ -188,7 +188,7 @@
                     ฿65.00
                 </ons-col>
                 <ons-col>
-                   <a href="#" data-name="Spicy Zabb Fish Rice Bowl" data-price="65" class="add-to-cart btn btn-primary">Add to cart</a>
+                   <a href="#" data-name="ข้าวยำปลาแซ่บ" data-price="65" class="add-to-cart btn btn-primary">Add to cart</a>
                   
                  
                 </ons-col>
@@ -196,100 +196,8 @@
     
               </ons-row>
           </ons-card>
-  
-          <ons-list-header style="background-color: rgb(165, 93, 42)">
-            <h5>Burger</h5>
-          </ons-list-header>
-          <ons-card>
-            <ons-row>
-              <ons-col>
-                <div class="left">
-                  <h5>Double Cheese Zinger Burger</h5>
-                  <h7>
-                    An irresistible Zinger Burger is now more flavorful with 2 pcs. of Cheddar Cheese. Can't miss!! (Price
-                    per piece).
-                  </h7>
-                </div>
-              </ons-col>
-  
-              <ons-col>
-                <center>
-                  <div modifier="chevron" id="item5" class="menu_item"></div>
-                  <div class="imgmenu"
-                    style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/KFC%2F1Burger.png?alt=media&token=d8209ef8-3f8a-4e4c-9b96-3ef6715a0fc4')">
-  
-                  </div>
-                </center>
-              </ons-col>
-  
-            </ons-row>
-  
-            <ons-row>
-                <ons-col style="margin-top: 15px;">
-                    ฿79.00
-                </ons-col>
-                <ons-col>
-                   <a href="#" data-name="Double Cheese Zinger Burger" data-price="79" class="add-to-cart btn btn-primary">Add to cart</a>
-                  
-                 
-                </ons-col>
-    
-    
-              </ons-row>
-          </ons-card>
-          <ons-card>
-            <ons-row>
-              <ons-col>
-                <div class="left">
-                  <h5>Double Cheese Krispy Fish Burger</h5>
-                  <h7>
-                    An Alaskan Pollock Fish Fillet Fried with 2pcs. Of Cheddar Cheese topped with Tartar Sauce and
-                    Lettuce. (Price per piece).
-                  </h7>
-                </div>
-              </ons-col>
-  
-              <ons-col>
-                <center>
-                  <div modifier="chevron" id="item6" class="menu_item"></div>
-                  <div class="imgmenu"
-                    style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/KFC%2FBurger_Fish.png?alt=media&token=23112dad-3490-4b62-87d1-fe33e9e639e0')">
-  
-                  </div>
-                </center>
-              </ons-col>
-  
-            </ons-row>
-  
-            <ons-row>
-                <ons-col style="margin-top: 15px;">
-                    ฿79.00
-                </ons-col>
-                <ons-col>
-                   <a href="#" data-name="Double Cheese Krispy Fish Burger" data-price="79" class="add-to-cart btn btn-primary">Add to cart</a>
-                  
-                 
-                </ons-col>
-    
-    
-              </ons-row> 
-          </ons-card>
-
-       
-  
-  
-           <!-- <ons-row>
-            <ons-col></ons-col>
-            <ons-col>
-              <div style="margin-left: 100px;">
-                <ons-button class="login-button" onclick="fn.pushPage({'id': 'OrderConfirm.html', 'title': 'OrderConfirm'})" >
-  
-                  <center>Order</center>
-                </ons-button>
-              </div>
-              </right>
-            </ons-col>
-          </ons-row>  -->
+          
+          </ons-row>  
   
         </ons-card>
     

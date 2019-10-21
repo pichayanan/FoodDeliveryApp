@@ -1,0 +1,127 @@
+<ons-page id="ResturantMenu1">
+        <ons-toolbar style="background-color: rgb(233, 163, 71)">
+                <div class="left">
+                  <ons-back-button></ons-back-button>
+                </div>
+                <div class="right" style="margin-right: 15px">
+                  <ons-icon icon="md-face"></ons-icon>
+                </div>
+                <div class="center">Menu</div>
+              </ons-toolbar>
+              <ons-card style="background-color: rgba(255, 235, 205, 0.37)">
+                <ons-row style="border: none">
+                  <ons-col>
+                    <left>
+                      <div modifier="chevron" id="item1" class="list_item"></div>
+                      <div class="imglist"
+                        style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/logo%2Fkfc.jpg?alt=media&token=f6f0597d-5afb-43ff-a300-ad3948a647e8')">
+        
+                      </div>
+                    </left>
+        
+                  </ons-col>
+                  <ons-col>
+                    <left>
+                      <div class="list_item_title" id="item1_Name">KFC</div>
+                    </left>
+                    <left>
+                      <div class="list_title" id="item1_title"> Free delivery </div>
+                    </left>
+                  </ons-col>
+                  <ons-col>
+                    <center>
+                      <div class="imgrate"
+                        style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/rate%2Fstar4.png?alt=media&token=e1b267a9-26d9-45ba-82b4-fc30742dadd1')">
+        
+                      </div>
+                    </center>
+                    </ons-col>
+                    </ons-row>
+                    </ons-card>
+    
+        <ons-row class="row justify-content-center">
+    
+            <ons-col>
+                <ons-card style="width: 99%">
+                    <p style="text-align: center"><b>Menu</b></p>
+                    <!-- Nav-->
+                    <nav class="navbar navbar-inverse bg-inverse fixed-top bg-faded">
+                        <div class="row">
+                            <center>
+                            <div class="col">
+                                <ons-button style="background-color:rgba(226, 183, 43, 0.849)" data-toggle="modal" data-target="#cart" onclick="fn.pushPage({'id': 'OrderConfirm.html', 'title': 'OrderConfirm'})">Cart (<span class="total-count"></span>)</ons-button>
+                                <ons-button style="background-color:rgba(226, 183, 43, 0.849)" class="clear-cart ">Clear Cart</ons-button>
+                            </div>
+                        </center>
+                        </div>
+                    </nav>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card" style="width: 100%;">
+    
+                                    <div class="card-block">
+                                            <h4 class="card-title">ไก่กรอบซอสมาโย</h4>
+                                            <p class="card-text">Price: 39 ฿</p>
+                                        <ons-button style="background-color:rgba(226, 183, 43, 0.849)"><a data-name="ไก่กรอบซอสมาโย" data-price="39" class="add-to-cart btn btn-primary" >Add to cart</a></ons-button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card" style="width: 100%;">
+    
+                                    <div class="card-block">
+                                        <h4 class="card-title">ไก่วิงซ์แซ่บ</h4>
+                                        <p class="card-text">Price: 49 ฿</p>
+                                        <ons-button style="background-color:rgba(226, 183, 43, 0.849)"><a data-name="ไก่วิงซ์แซ่บ" data-price="49" class="add-to-cart btn btn-primary">Add to cart</a></ons-button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card" style="width: 100%;">
+    
+                                    <div class="card-block">
+                                        <h4 class="card-title">ข้าวยำไก่แซ่บ</h4>
+                                        <p class="card-text">Price: 59 ฿</p>
+                                        <ons-button style="background-color:rgba(226, 183, 43, 0.849)"><a data-name="ข้าวยำไก่แซ่บ" data-price="59" class="add-to-cart btn btn-primary">Add to cart</a></ons-button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card" style="width: 100%;">
+    
+                                    <div class="card-block">
+                                        <h4 class="card-title">ข้าวยำปลาแซ่บ</h4>
+                                        <p class="card-text">Price: 65 ฿</p>
+                                        <ons-button style="background-color:rgba(226, 183, 43, 0.849)"><a data-name="ข้าวยำปลาแซ่บ" data-price="65" class="add-to-cart btn btn-primary">Add to cart</a></ons-button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card" style="width: 100%;">
+    
+                                    <div class="card-block">
+                                        <h4 class="card-title">ดับเบิลชีส ซิงเกอร์เบอร์เกอร์</h4>
+                                        <p class="card-text">Price: 79 ฿</p>
+                                        <ons-button style="background-color:rgba(226, 183, 43, 0.849)"><a data-name="ดับเบิลชีส ซิงเกอร์เบอร์เกอร์" data-price="79" class="add-to-cart btn btn-primary">Add to cart</a></ons-button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                    <div class="card" style="width: 100%;">
+        
+                                        <div class="card-block">
+                                            <h4 class="card-title">ดับเบิลชีส เบอร์เกอร์ปลาคริสปี้</h4>
+                                            <p class="card-text">Price: 79 ฿</p>
+                                            <ons-button style="background-color:rgba(226, 183, 43, 0.849)"><a data-name="ดับเบิลชีส เบอร์เกอร์ปลาคริสปี้" data-price="79" class="add-to-cart btn btn-primary">Add to cart</a></ons-button>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                        </div>
+                    </div>
+                    
+                </ons-card>
+            </ons-col>
+        </ons-row>
+    </ons-page>
