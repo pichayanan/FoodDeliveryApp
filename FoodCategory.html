@@ -28,7 +28,8 @@
               </div>
               <div class="recomended_item_title" id="item1_Name">KFC</div>
             </ons-carousel-item>
-            <ons-carousel-item modifier="nodivider" id="item2" class="recomended_item">
+            <ons-carousel-item modifier="nodivider" id="item2" class="recomended_item"
+            onclick="fn.pushPage({'id': 'ResturantMenu1.html', 'title': 'ResturantMenu1'})">
               <div class="thumbnail"
                 style="background-image: url('https://firebasestorage.googleapis.com/v0/b/fooddeliveryapp-51a8d.appspot.com/o/recommended%2Fjapan.jpg?alt=media&token=72df14b4-bb16-4cc3-9f33-018c04361ae7')">
 
@@ -115,7 +116,7 @@
         </ons-row>
         <ons-row>
           <ons-col>
-            <ons-card class="card">
+              <ons-card class="card" onclick="fn.pushPage({'id': 'ResturantList1.html', 'title': 'ResturantList1'})">
               <center>
                 <div modifier="nodivider" id="item3" class="category_item"></div>
                 <div class="imgcategory"
