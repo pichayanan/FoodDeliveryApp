@@ -222,8 +222,8 @@ input[type=password] {
 }
 .imgmenu{
   width:120px;
-  height:120px;
-  background-size: 120%;
+  height:100px;
+  background-size: 110%;
 }
 .imglogo{
   width:175px;
