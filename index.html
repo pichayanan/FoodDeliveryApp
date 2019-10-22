@@ -24,6 +24,17 @@
   <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script>
 
   <script src="lib/jquery/jquery-3.4.1.min.js"></script>
+  <link rel="manifest" href="/manifest.json">
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+            .then((reg) => {
+              console.log('Service worker registered.', reg);
+            });
+      });
+    }
+    </script>
 
 
 </head>
