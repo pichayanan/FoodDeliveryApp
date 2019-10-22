@@ -239,3 +239,16 @@ input[type=password] {
 .LOGO{
   background-blend-mode: color-burn;
 }
+.item-count{
+  width:20%;
+  height:10%;
+
+}
+.minus-item{
+  width:20%;
+  height:10%;
+}
+.plus-item{
+  width:20%;
+  height:10%;
+}
