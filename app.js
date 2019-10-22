@@ -147,39 +147,7 @@ document.addEventListener('init', function (event) {
 
   }
 
-if (page.id === 'OrderConfirm') {
-    console.log("register");
 
-    $("#signup-buttons").click(function () {
-
-      var email = document.getElementById('username').value;
-      var password = document.getElementById('password').value;
-      firebase.auth().createUserWithEmailAndPassword(email, password).then(function () {
-        content.load('FoodCategory.html');
-      })
-
-        .catch(function (error) {
-          var errorCode = error.code;
-          var errorMessage = error.message;
-
-          if (errorCode === 'auth/weak-password') {
-            alert('The password is too weak');
-
-          } else {
-            alert(errorMessage);
-            content.load('login.html');
-          }
-
-        });
-    });
-
-
-
-
-    // Handle Errors here.
-
-
-  };
 
 
 
